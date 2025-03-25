@@ -1,0 +1,74 @@
+body {
+    background-color: #0a0a1a;
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    scroll-behavior: smooth;
+}
+.neon-border {
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff, inset 0 0 10px #00ffff;
+}
+.neon-text {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+.game-highlight {
+    transition: transform 0.3s ease;
+}
+.game-highlight:hover {
+    transform: scale(1.05);
+}
+.cyberpunk-glitch {
+    position: relative;
+    color: #00ffff;
+    text-transform: uppercase;
+}
+.cyberpunk-glitch::before,
+.cyberpunk-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.cyberpunk-glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 red;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+.cyberpunk-glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 blue;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+@keyframes glitch-anim {
+    0% { clip: rect(58px, 9999px, 25px, 0); }
+    5% { clip: rect(37px, 9999px, 94px, 0); }
+    10% { clip: rect(12px, 9999px, 59px, 0); }
+    15% { clip: rect(34px, 9999px, 16px, 0); }
+    20% { clip: rect(6px, 9999px, 55px, 0); }
+    25% { clip: rect(95px, 9999px, 66px, 0); }
+    30% { clip: rect(44px, 9999px, 11px, 0); }
+    35% { clip: rect(65px, 9999px, 27px, 0); }
+    40% { clip: rect(74px, 9999px, 13px, 0); }
+    45% { clip: rect(34px, 9999px, 50px, 0); }
+    50% { clip: rect(3px, 9999px, 42px, 0); }
+}
+@keyframes glitch-anim2 {
+    0% { clip: rect(29px, 9999px, 61px, 0); }
+    5% { clip: rect(58px, 9999px, 13px, 0); }
+    10% { clip: rect(54px, 9999px, 3px, 0); }
+    15% { clip: rect(36px, 9999px, 94px, 0); }
+    20% { clip: rect(45px, 9999px, 65px, 0); }
+    25% { clip: rect(34px, 9999px, 12px, 0); }
+    30% { clip: rect(12px, 9999px, 24px, 0); }
+    35% { clip: rect(85px, 9999px, 56px, 0); }
+    40% { clip: rect(44px, 9999px, 32px, 0); }
+    45% { clip: rect(34px, 9999px, 22px, 0); }
+    50% { clip: rect(75px, 9999px, 66px, 0); }
+}
+.aspect-video {
+    aspect-ratio: 16/9;
+}
